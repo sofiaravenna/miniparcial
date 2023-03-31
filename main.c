@@ -2,12 +2,24 @@
 
 int main() {
 
-    int i, notas[]=0,promedio;
-    for (i=0;  i != -1; i++){
-        printf("Ingresar las notas de los alumnos \n");
-        notas[i]=i++;
+    float nota, suma=0, promedio;
+    int contador=0;
+
+    printf("Ingresar la nota. Para finalizar el el programa ingrese -1.\n");
+
+
+    do{
+        printf("Ingresar la nota: ");
+
+        scanf("%f",&nota);
+        if(nota != -1){
+        suma=suma+nota;
+        contador=contador+1;}
+
     }
-    promedio= notas/
+    while(nota != -1);
+    promedio=suma/(contador);
+    printf("El promedio del curso es: %f",promedio);
 
     return 0;
 }
